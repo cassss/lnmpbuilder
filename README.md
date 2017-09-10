@@ -56,7 +56,8 @@
 				location ~ \.php$ {
                                 try_files $uri /index.php =404;
                                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
-				fastcgi_pass unix:/var/run/php/php7.0-fpm.sock; #确认php7.0-fpm.sock的位置，错误将无法正确识别php代码
+				fastcgi_pass unix:/var/run/php/php7.0-fpm.sock; 
+				#确认php7.0-fpm.sock的位置，错误将无法正确识别php代码
 				fastcgi_index index.php;
 				fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 				include fastcgi_params;
