@@ -66,3 +66,26 @@
                                 deny all;
                         }
                 }
+###    4.php默认安装的拓展：
+		calendar,Core,ctype,curl,date,exif,fileinfo,filter,ftp,gettext,hash,iconv,json,libxml
+		mysqli,mysqlnd
+		openssl
+		pcntl
+		pcre
+		PDO
+		pdo_mysql
+		Phar
+		posix
+		readline
+		Reflection
+		session
+		shmop
+		sockets
+		SPL
+		standard
+		sysvmsg
+		sysvsem
+		sysvshm
+		tokenizer
+		Zend OPcache
+		zlib
