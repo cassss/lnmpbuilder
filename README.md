@@ -1,5 +1,5 @@
 # lnmpbuilder-py3
-## 本脚本仅为了个人快速部署lnmp环境且php版本为7.0，本人主要用于腾讯云或阿里云部署laravel项目，基于python3,所以执行时请注意
+## 本脚本仅为了个人快速部署lnmp环境且php版本为7.0，本人主要用于腾讯云或阿里云部署laravel项目
 ### 执行方法 将lnmpubuntu16.py传到ubuntu16的服务器上后以root用户在命令行输入：
 	python3 lnmpubuntu16.py
 ### 然后按脚本提示操作即可
@@ -17,8 +17,9 @@
         :quit! 强制退出
 
 ## 注意事项：
-###    1.配置mysql远程访问时，请找到“bind-address= 127.0.0.1”改为 “bind-address = 0.0.0.0”或在此行前面注释加#即可
-###    2.若mysql远程访问失败尝试下面命令：
+###    1.环境要求：无lnmp环境的Ubuntu Server 16,Python3,root限权
+###    2.配置mysql远程访问时，请找到“bind-address= 127.0.0.1”改为 “bind-address = 0.0.0.0”或在此行前面注释加#即可
+###    3.若mysql远程访问失败尝试下面命令：
         mysql_secure_installation
 				Enter current password for root (enter for none):
 				解释：输入当前 root 用户密码，默认为空，直接回车。
@@ -32,7 +33,7 @@
 				解释：要去掉 test 数据库吗？输入 y 表示愿意。
 				Reload privilege tables now? [Y/n]  y
 				解释：想要重新加载权限吗？输入 y 表示愿意。
-###    3.关于Nginx配置：
+###    4.关于Nginx配置：
         	打开nginx的配置文件之后，找到server这一块，大概是长这个样子的
                 server {
                 listen80 default_server;
@@ -67,11 +68,11 @@
 				    }
 			    }
 
-###    4.php默认已安装的拓展：
+###    5.php默认已安装的拓展：
 		calendar,Core,ctype,curl,date,exif,fileinfo,filter,ftp,gettext,hash,iconv,json,libxml
 		mysqli,mysqlnd,openssl,pcntl,pcre,PDO,pdo_mysql,Phar,posix,readline,Reflection,session
 		shmop,sockets,SPL,standard,sysvmsg,sysvsem,sysvshm,tokenizer,Zend OPcache,zlib
-###    5.php可选拓展：
+###    6.php可选拓展：
 		php7.0            php7.0-fpm        php7.0-mysql      php7.0-sqlite3
 		php7.0-bcmath     php7.0-gd         php7.0-odbc       php7.0-sybase
 		php7.0-bz2        php7.0-gmp        php7.0-opcache    php7.0-tidy
