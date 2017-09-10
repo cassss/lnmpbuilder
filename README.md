@@ -18,22 +18,15 @@
 
 ## 注意事项：
 ###    1.环境要求：无lnmp环境的Ubuntu Server 16,Python3,root限权
-###    2.配置mysql远程访问时，请找到“bind-address= 127.0.0.1”改为 “bind-address = 0.0.0.0”或在此行前面注释加#即可
-###    3.若mysql远程访问失败尝试下面命令：
-        mysql_secure_installation
-				Enter current password for root (enter for none):
-				解释：输入当前 root 用户密码，默认为空，直接回车。
-				Set root password? [Y/n]  y
-				解释：要设置 root 密码吗？输入 y 表示愿意。
-				Remove anonymous users? [Y/n]  y
-				解释：要移除掉匿名用户吗？输入 y 表示愿意。
-				Disallow root login remotely? [Y/n]  n
-				解释：不想让 root 远程登陆吗？输入n 表示允许远程登录。
-				Remove test database and access to it? [Y/n]  y
-				解释：要去掉 test 数据库吗？输入 y 表示愿意。
-				Reload privilege tables now? [Y/n]  y
-				解释：想要重新加载权限吗？输入 y 表示愿意。
-###    4.关于Nginx配置：
+###    2.配置mysql远程访问时
+		找到“bind-address= 127.0.0.1”改为 “bind-address = 0.0.0.0”
+		或注释此行，即在前面加#
+###    3.关于进一步mysql远程访问：
+		首先输入mysql密码
+		use mysql;
+		grant all privileges on *.* to root@"%" identified by "yourpassword" with grant option;
+		flush privileges;
+###    4.关于Nginx配置：
         	打开nginx的配置文件之后，找到server这一块，大概是长这个样子的
                 server {
                 listen80 default_server;
