@@ -1,8 +1,8 @@
 # lnmpbuilder-py3
-本脚本仅为了个人快速部署lnmp环境，本人主要用于部署laravel项目，基于python3,所以执行时请注意
-执行方法 将lnmpubuntu16.py传到ubuntu16的服务器上后以root用户在命令行输入
-python3 lnmpubuntu16.py
-按脚本提示操作即可
+## 本脚本仅为了个人快速部署lnmp环境，本人主要用于部署laravel项目，基于python3,所以执行时请注意
+### 执行方法 将lnmpubuntu16.py传到ubuntu16的服务器上后以root用户在命令行输入： <br>
+	python3 lnmpubuntu16.py
+	按脚本提示操作即可
 
 提示：
     1.vim的简单操作
