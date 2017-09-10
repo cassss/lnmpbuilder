@@ -1,5 +1,5 @@
 # lnmpbuilder-py3
-## 本脚本仅为了个人快速部署lnmp环境，本人主要用于腾讯云或阿里云部署laravel项目，基于python3,所以执行时请注意
+## 本脚本仅为了个人快速部署lnmp环境且php版本为7.0，本人主要用于腾讯云或阿里云部署laravel项目，基于python3,所以执行时请注意
 ### 执行方法 将lnmpubuntu16.py传到ubuntu16的服务器上后以root用户在命令行输入： <br>
 	python3 lnmpubuntu16.py
 ### 然后按脚本提示操作即可
