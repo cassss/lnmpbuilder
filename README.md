@@ -53,7 +53,7 @@
                         location / {
 				try_files $uri $uri/ /index.php?$query_string;
 				}    #开启路由访问，laravel项目必须添加
-                       	location ~ \.php$ {
+				location ~ \.php$ {
                                 try_files $uri /index.php =404;
                                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
                                 fastcgi_pass unix:/var/run/php/php7.0-fpm.sock; #确认php7.0-fpm.sock的位置，错误将无法正确识别php代码
