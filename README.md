@@ -49,8 +49,10 @@
                         listen 80;
                         root /var/www/laravel/public;  #访问文件目录
                         index index.php index.html index.htm;
-                        server_name a.com;   #将server_domain_or_IP修改为你的公网IP或者域名
-                        location / {try_files $uri $uri/ /index.php?$query_string;}#开启路由访问，laravel项目必须添加
+                        server_name a.com;    #将server_domain_or_IP修改为你的公网IP或者域名
+                        location / {
+				try_files $uri $uri/ /index.php?$query_string;
+				}    #开启路由访问，laravel项目必须添加
                        	location ~ \.php$ {
                                 try_files $uri /index.php =404;
                                 fastcgi_split_path_info ^(.+\.php)(/.+)$;
