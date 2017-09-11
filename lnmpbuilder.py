@@ -36,7 +36,7 @@ git = input('可选安装：git，安装请输入y:')
 if git == 'y':
     os.system('apt install git -y')
 fish = input('可选安装：fish，安装请输入y,修改为默认shell请输入yy(强烈建议):')
-if fish == 'y'：
+if fish == 'y':
     os.system('apt install fish -y')
 elif fish == 'yy':
     os.system('apt install fish -y')
