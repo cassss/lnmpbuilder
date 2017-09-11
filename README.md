@@ -11,6 +11,7 @@
 		use mysql;
 		grant all privileges on *.* to root@"%" identified by "yourpassword" with grant option;
 		flush privileges;
+		exit
 ###		3.关于Nginx配置：
 ####		Nginx配置文件地址：/etc/nginx/sites-available/default,设置如下
 		 server {
