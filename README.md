@@ -18,35 +18,21 @@
 
 ## 注意事项：
 ###    1.环境要求：无lnmp环境的Ubuntu Server 16,Python3,root限权
-###    2.配置mysql远程访问时
-		找到“bind-address= 127.0.0.1”改为 “bind-address = 0.0.0.0”
-		或注释此行，即在前面加#
-###    3.关于进一步mysql远程访问：
+###    2.关于进一步mysql远程访问：
 		首先输入mysql密码
 		use mysql;
 		grant all privileges on *.* to root@"%" identified by "yourpassword" with grant option;
 		flush privileges;
-###    4.关于Nginx配置：
-        	打开nginx的配置文件之后，找到server这一块，大概是长这个样子的
-                server {
-                listen80 default_server;
-                listen [::]:80 default_server ipv6only=on;
-                root /usr/share/nginx/html;
-                index index.html index.htm;
-                server_name localhost;
-                location / {
-                        try_files$uri$uri/ =404;
-                }
-                }
-            修改成如下 ：
+###    3.关于Nginx配置：
+####		Nginx配置文件地址：/etc/nginx/sites-available/default,设置如下
 		 server {
 				    listen 80;
-				    root /var/www/html;  #访问文件目录
+				    root /var/www/html;  #站点访问根目录
 				    index index.php index.html index.htm index.nginx-debian.html;
-				    server_name a.com;    #将server_domain_or_IP修改为你的公网IP或者域名
+				    server_name lnmpbuilder.com;    #将server_domain_or_IP修改为你的公网IP或者域名
 				    #location / {
 				    #   try_files $uri $uri/ /index.php?$query_string;
-				    #   }    #开启路由访问,laravel项目必须添加
+				    #   }    #开启路由访问,laravel项目必须去掉注释
 					location ~ \.php$ {
 					    try_files $uri /index.php =404;
 					    fastcgi_split_path_info ^(.+\.php)(/.+)$;
