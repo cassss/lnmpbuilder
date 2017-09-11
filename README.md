@@ -6,7 +6,7 @@
 
 ## 注意事项：
 ###		1.环境要求：无lnmp环境的Ubuntu Server 16,Python3,root限权
-###		2.关于进一步mysql远程访问：
+###		2.关于配置mysql远程访问：
 		首先输入mysql密码
 		use mysql;
 		grant all privileges on *.* to root@"%" identified by "yourpassword" with grant option;
