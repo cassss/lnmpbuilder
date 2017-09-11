@@ -30,7 +30,11 @@ os.system('apt-get update')
 os.system('apt install php7.0-fpm php7.0-mysql php7.0-curl -y')
 os.system('mkdir -p /var/www')
 os.system('rm -rf /etc/nginx/sites-available/default')
-os.system('cp default  /etc/nginx/sites-available/default')
+laravel = input('即将配置Nginx设置，若要部署laravel项目请输入y，其他则输入其他任意键')
+if laravel == 'y':
+    os.system('cp laravel  /etc/nginx/sites-available/default')
+else:
+    os.system('cp default  /etc/nginx/sites-available/default')
 os.system('service nginx restart')
 git = input('可选安装：git，安装请输入y:')
 if git == 'y':
@@ -41,6 +45,8 @@ if fish == 'y':
 elif fish == 'yy':
     os.system('apt install fish -y')
     os.system('chsh -s /usr/bin/fish')
-input('安装已结束,访问ip即可看到Nginx的欢迎页面，网站根目录在/var/www/html,按任意键退出脚本')
+print('安装已结束,访问ip即可看到Nginx的欢迎页面')
+print('网站默认根目录:/var/www/html')
+print('修改Nginx配置请输入:sudo vim /etc/nginx/sites-available/default')
+input('按任意键退出脚本')
 sys.exit(1)
-
