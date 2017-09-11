@@ -4,18 +4,6 @@
 	sudo python3 lnmpubuntu16.py
 ### 然后按脚本提示操作即可
 
-## 提示：
-###	1.vim的简单操作
-        i 文本操作模式
-        esc 退出文本操作模式到命令模式
-####	命令模式下：
-        dd     删除光标所在行
-        /key   搜索key
-        :wq    保存
-        :wq!   强制保存
-        :quit  退出
-        :quit! 强制退出
-
 ## 注意事项：
 ###    1.环境要求：无lnmp环境的Ubuntu Server 16,Python3,root限权
 ###    2.关于进一步mysql远程访问：
