@@ -1,6 +1,6 @@
 # lnmpbuilder-py3
 ## 本脚本仅为了快速部署lnmp环境,php版本为7.0<br>作者为py初学者，制作此脚本主要为了快速部署laravel项目
-### 执行方法 将lnmpubuntu16.py传到ubuntu16的服务器上后在命令行输入：
+### 执行方法将本项目上传到ubuntu16的服务器上后进入项目根目录在命令行输入：
 	sudo python3 lnmpubuntu16.py
 ### 然后按脚本提示操作即可
 
