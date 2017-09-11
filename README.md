@@ -18,10 +18,12 @@
 				    listen 80;
 				    root /var/www/html;  #站点访问根目录
 				    index index.php index.html index.htm index.nginx-debian.html;
-				    server_name lnmpbuilder.com;    #将server_domain_or_IP修改为你的公网IP或者域名
-				    #location / {
-				    #   try_files $uri $uri/ /index.php?$query_string;
-				    #   }    #开启路由访问,laravel项目必须去掉注释
+				    server_name lnmp.com;    #将server_domain_or_IP修改为你的公网IP或者域名
+				    location / {
+						try_files $uri $uri/ =404；
+				       # try_files $uri $uri/ /index.php?$query_string;
+					   #上行设置为开启路由访问,laravel项目需要改为上行设置
+				       }    
 					location ~ \.php$ {
 					    try_files $uri /index.php =404;
 					    fastcgi_split_path_info ^(.+\.php)(/.+)$;
