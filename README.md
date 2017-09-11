@@ -5,13 +5,13 @@
 ### 然后按脚本提示操作即可
 
 ## 注意事项：
-###    1.环境要求：无lnmp环境的Ubuntu Server 16,Python3,root限权
-###    2.关于进一步mysql远程访问：
+###		1.环境要求：无lnmp环境的Ubuntu Server 16,Python3,root限权
+###		2.关于进一步mysql远程访问：
 		首先输入mysql密码
 		use mysql;
 		grant all privileges on *.* to root@"%" identified by "yourpassword" with grant option;
 		flush privileges;
-###    3.关于Nginx配置：
+###		3.关于Nginx配置：
 ####		Nginx配置文件地址：/etc/nginx/sites-available/default,设置如下
 		 server {
 				    listen 80;
