@@ -41,7 +41,9 @@
 ###    5.php默认已安装的拓展：
 		calendar,Core,ctype,curl,date,exif,fileinfo,filter,ftp,gettext,hash,iconv,json,libxml
 		mysqli,mysqlnd,openssl,pcntl,pcre,PDO,pdo_mysql,Phar,posix,readline,Reflection,session
-		shmop,sockets,SPL,standard,sysvmsg,sysvsem,sysvshm,tokenizer,Zend OPcache,zlib
+		shmop,sockets,SPL,standard,sysvmsg,sysvsem,sysvshm,tokenizer,Zend OPcache,zlib,xml
+		xmlreader,xmlrpc,xmlwriter
+
 ###    6.php可选拓展：
 		php7.0            php7.0-fpm        php7.0-mysql      php7.0-sqlite3
 		php7.0-bcmath     php7.0-gd         php7.0-odbc       php7.0-sybase
