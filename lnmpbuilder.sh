@@ -36,7 +36,7 @@ else
         cp default  /etc/nginx/sites-available/default
     fi
     service nginx restart
-    echo "可选安装以下软件应用:"
+    echo "可选安装以下软件应用,不安装则输入其他按键:"
     select var in "git" "fish shell" "全部安装"; do 
         case $var in
         "git")
