@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/bash
 if [ `id -u` -ne 0 ];then  
     echo "此脚本需要root限权，请输入密码:";
     sudo "./$0";
